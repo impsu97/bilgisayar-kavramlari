@@ -6,7 +6,7 @@ from django.utils import timezone
 class Gonderi(models.Model):
     baslik = models.CharField(max_length=200)
     icerik = models.TextField()
-    yazar = models.ForeignKey('auth.User')   
+    yazar = models.ForeignKey('auth.User',on_delete=models.CASCADE)   
     y_tarihi = models.DateTimeField(blank=True, null=True)
     tag = models.CharField(max_length=300, blank=True, null=True)
 
